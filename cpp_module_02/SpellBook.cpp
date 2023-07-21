@@ -2,7 +2,6 @@
 
 SpellBook::SpellBook() :
     list() {}
-
 SpellBook::~SpellBook() {
     for (std::unordered_map<std::string, ASpell *>::iterator it = list.begin();
         it != list.end(); ++it) { delete it->second; }

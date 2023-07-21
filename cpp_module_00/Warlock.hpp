@@ -5,24 +5,24 @@
 #include <iostream>
 
 class Warlock {
-    std::string name;
-    std::string title;
+	std::string name;
+	std::string title;
 
 private:
-    Warlock();
-    Warlock(Warlock const &rhs);
-    Warlock &operator=(Warlock const &rhs);
+	Warlock();
+	Warlock(Warlock const &rhs);
+	Warlock &operator=(Warlock const &rhs);
 
 public:
-    Warlock(std::string const &name, std::string const &title);
-    virtual ~Warlock();
+	Warlock(std::string const &name, std::string const &title);
+	virtual ~Warlock();
 
-    virtual std::string const &getName() const;
-    virtual std::string const &getTitle() const;
+	virtual std::string const &getName() const;
+	virtual std::string const &getTitle() const;
 
-    virtual void setTitle(std::string const &title);
+	virtual void setTitle(std::string const &title);
 
-    virtual void introduce() const;
+	virtual void introduce() const;
 
 };
 

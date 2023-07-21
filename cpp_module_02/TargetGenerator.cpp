@@ -2,7 +2,6 @@
 
 TargetGenerator::TargetGenerator() :
     targs() {}
-
 TargetGenerator::~TargetGenerator() {
     for (std::unordered_map<std::string, ATarget *>::iterator it = targs.begin();
         it != targs.end(); ++it) { delete it->second; }

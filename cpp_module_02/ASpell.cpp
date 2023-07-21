@@ -4,15 +4,11 @@
 ASpell::ASpell() :
     name(),
     effects() {}
-
 ASpell::ASpell(ASpell const &rhs) { *this = rhs; }
-
 ASpell::ASpell(std::string const &name, std::string const &effects) :
     name(name),
     effects(effects) {}
-
 ASpell::~ASpell() {}
-
 ASpell &ASpell::operator=(ASpell const &rhs) {
     if (this == &rhs) { return *this; }
     name = rhs.name;

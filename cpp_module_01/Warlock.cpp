@@ -5,11 +5,10 @@ Warlock::Warlock(std::string const &name, std::string const &title) :
 	title(title),
 	list()
 {
-    std::cout << name << ": This looks like another boring day.\n";
+	std::cout << name << ": This looks like another boring day.\n";
 }
-
 Warlock::~Warlock() {
-    std::cout << name << ": My job here is done!\n";
+	std::cout << name << ": My job here is done!\n";
 	for (std::unordered_map<std::string, ASpell *>::iterator it = list.begin();
 		it != list.end(); ++it) { delete it->second; }
 }
