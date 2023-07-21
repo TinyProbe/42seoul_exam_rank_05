@@ -6,11 +6,9 @@ SpellBook::SpellBook() :
 SpellBook::~SpellBook() {
     for (std::unordered_map<std::string, ASpell *>::iterator it = list.begin();
         it != list.end(); ++it) { delete it->second; }
-    list.clear();
 }
 
 void SpellBook::learnSpell(ASpell *spell) {
-    if (spell == NULL) { return; }
     std::unordered_map<std::string, ASpell *>::iterator it = list.find(spell->getName());
     if (it != list.end()) {
         delete it->second;

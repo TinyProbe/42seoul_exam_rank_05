@@ -6,11 +6,9 @@ TargetGenerator::TargetGenerator() :
 TargetGenerator::~TargetGenerator() {
     for (std::unordered_map<std::string, ATarget *>::iterator it = targs.begin();
         it != targs.end(); ++it) { delete it->second; }
-    targs.clear();
 }
 
 void TargetGenerator::learnTargetType(ATarget *targ) {
-    if (targ == NULL) { return; }
     std::unordered_map<std::string, ATarget *>::iterator it = targs.find(targ->getType());
     if (it != targs.end()) {
         delete it->second;

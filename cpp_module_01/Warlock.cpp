@@ -12,7 +12,6 @@ Warlock::~Warlock() {
     std::cout << name << ": My job here is done!\n";
 	for (std::unordered_map<std::string, ASpell *>::iterator it = list.begin();
 		it != list.end(); ++it) { delete it->second; }
-    list.clear();
 }
 
 std::string const &Warlock::getName() const { return name; }
@@ -25,7 +24,6 @@ void Warlock::introduce() const {
 }
 
 void Warlock::learnSpell(ASpell *spell) {
-	if (spell == NULL) { return; }
 	std::unordered_map<std::string, ASpell *>::iterator it = list.begin();
 	if (it != list.end()) {
 		delete it->second;
@@ -47,3 +45,4 @@ void Warlock::launchSpell(std::string const &name, ATarget const &targ) {
 		it->second->launch(targ);
 	}
 }
+
