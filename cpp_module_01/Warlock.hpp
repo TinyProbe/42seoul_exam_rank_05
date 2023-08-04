@@ -2,7 +2,7 @@
 #ifndef WARLOCK_HPP
 #define WARLOCK_HPP
 
-#include <map>
+#include <unordered_map>
 #include <iostream>
 #include "ASpell.hpp"
 #include "ATarget.hpp"

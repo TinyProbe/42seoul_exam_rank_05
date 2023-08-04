@@ -23,7 +23,7 @@ void Warlock::introduce() const {
 }
 
 void Warlock::learnSpell(ASpell *spell) {
-	std::unordered_map<std::string, ASpell *>::iterator it = list.begin();
+	std::unordered_map<std::string, ASpell *>::iterator it = list.find(spell->getName());
 	if (it != list.end()) {
 		delete it->second;
 		it->second = spell->clone();

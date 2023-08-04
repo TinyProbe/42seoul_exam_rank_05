@@ -2,7 +2,7 @@
 #ifndef SPELLBOOK_HPP
 #define SPELLBOOK_HPP
 
-#include <map>
+#include <unordered_map>
 #include "ASpell.hpp"
 
 class SpellBook {

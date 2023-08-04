@@ -2,7 +2,7 @@
 #ifndef TARGETGENERATOR_HPP
 #define TARGETGENERATOR_HPP
 
-#include <map>
+#include <unordered_map>
 #include "ATarget.hpp"
 
 class TargetGenerator {

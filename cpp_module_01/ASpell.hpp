@@ -6,6 +6,8 @@
 
 class ATarget;
 class ASpell {
+
+protected:
 	std::string name;
 	std::string effects;
 
